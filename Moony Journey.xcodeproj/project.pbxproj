@@ -28,6 +28,7 @@
 		F16F15D22ABAA4BA00F24263 /* Heebo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F16F15C92ABAA4BA00F24263 /* Heebo-Regular.ttf */; };
 		F16F15D32ABAA4BA00F24263 /* Heebo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F16F15CA2ABAA4BA00F24263 /* Heebo-Medium.ttf */; };
 		F16F15D42ABAA4BA00F24263 /* Heebo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F16F15CB2ABAA4BA00F24263 /* Heebo-Bold.ttf */; };
+		F16F15D72ABAA8F600F24263 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F15D62ABAA8F600F24263 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		F16F15C92ABAA4BA00F24263 /* Heebo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Regular.ttf"; sourceTree = "<group>"; };
 		F16F15CA2ABAA4BA00F24263 /* Heebo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Medium.ttf"; sourceTree = "<group>"; };
 		F16F15CB2ABAA4BA00F24263 /* Heebo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Bold.ttf"; sourceTree = "<group>"; };
+		F16F15D62ABAA8F600F24263 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		F16F15A42ABA94EA00F24263 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F16F15D52ABAA8D900F24263 /* TabBarModule */,
 				F16F15B42ABA9CEA00F24263 /* MainModule */,
 				F16F15B82ABA9D6800F24263 /* LevelModule */,
 			);
@@ -215,6 +218,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		F16F15D52ABAA8D900F24263 /* TabBarModule */ = {
+			isa = PBXGroup;
+			children = (
+				F16F15D62ABAA8F600F24263 /* TabBarController.swift */,
+			);
+			path = TabBarModule;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -304,6 +315,7 @@
 				F16F15942ABA94C300F24263 /* MainViewController.swift in Sources */,
 				F16F15B02ABA98CA00F24263 /* AppColor.swift in Sources */,
 				F16F15AC2ABA973B00F24263 /* AppImage.swift in Sources */,
+				F16F15D72ABAA8F600F24263 /* TabBarController.swift in Sources */,
 				F16F15BD2ABA9DF300F24263 /* LevelViewController.swift in Sources */,
 				F16F15902ABA94C300F24263 /* AppDelegate.swift in Sources */,
 				F16F15BF2ABA9EAE00F24263 /* SectionType.swift in Sources */,

@@ -43,6 +43,13 @@ enum AppImage: String, AppImageProtocol {
     case levelOpen
     case levelClosed
     
+    // MARK: - TabBar
+    
+    case homeTabActive
+    case homeTabInactive
+    case settingsTabActive
+    case settingsTabInactive
+    
     // MARK: - Background
     
     case background

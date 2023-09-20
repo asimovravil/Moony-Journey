@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         window.overrideUserInterfaceStyle = .dark
         
-        let mainViewController = MainViewController()
+        let mainViewController = TabBarController()
         let navigationController = UINavigationController(rootViewController: mainViewController)
         
         window.rootViewController = navigationController
