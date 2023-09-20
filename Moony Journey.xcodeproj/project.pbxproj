@@ -83,7 +83,7 @@
 		F16F15A42ABA94EA00F24263 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F16F15932ABA94C300F24263 /* MainViewController.swift */,
+				F16F15B42ABA9CEA00F24263 /* MainModule */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -91,10 +91,8 @@
 		F16F15A52ABA94F700F24263 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F16F15982ABA94C500F24263 /* Assets.xcassets */,
-				F16F15AD2ABA988B00F24263 /* Colors.xcassets */,
-				F16F15AB2ABA973B00F24263 /* AppImage.swift */,
-				F16F15AF2ABA98CA00F24263 /* AppColor.swift */,
+				F16F15B52ABA9CF100F24263 /* AssetHelp */,
+				F16F15B62ABA9CF900F24263 /* AppHelp */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -113,6 +111,32 @@
 				F16F159D2ABA94C500F24263 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F16F15B42ABA9CEA00F24263 /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				F16F15932ABA94C300F24263 /* MainViewController.swift */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		F16F15B52ABA9CF100F24263 /* AssetHelp */ = {
+			isa = PBXGroup;
+			children = (
+				F16F15982ABA94C500F24263 /* Assets.xcassets */,
+				F16F15AD2ABA988B00F24263 /* Colors.xcassets */,
+			);
+			path = AssetHelp;
+			sourceTree = "<group>";
+		};
+		F16F15B62ABA9CF900F24263 /* AppHelp */ = {
+			isa = PBXGroup;
+			children = (
+				F16F15AB2ABA973B00F24263 /* AppImage.swift */,
+				F16F15AF2ABA98CA00F24263 /* AppColor.swift */,
+			);
+			path = AppHelp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
