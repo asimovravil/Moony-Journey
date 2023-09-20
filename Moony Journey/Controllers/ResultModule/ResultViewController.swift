@@ -10,6 +10,8 @@ import SnapKit
 
 final class ResultViewController: UIViewController {
 
+    var userCorrectAnswers: Int = 0
+    
     // MARK: - UI
     
     private lazy var totalCorrectLabel: UILabel = {
@@ -71,6 +73,7 @@ final class ResultViewController: UIViewController {
         setupViews()
         setupConstraints()
         setupNavigationBar()
+        calculateScore()
     }
     
     // MARK: - setupViews
@@ -99,12 +102,11 @@ final class ResultViewController: UIViewController {
             make.trailing.equalToSuperview().offset(-24)
         }
         finalScoreLabel.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(138.5)
-            make.trailing.equalToSuperview().offset(-157.5)
+            make.trailing.equalTo(percentLabel.snp.leading)
             make.bottom.equalTo(finalScoreImage.snp.bottom).offset(-89)
         }
         percentLabel.snp.makeConstraints { make in
-            make.leading.equalTo(finalScoreLabel.snp.trailing)
+            make.trailing.equalToSuperview().offset(-131.5)
             make.bottom.equalTo(finalScoreImage.snp.bottom).offset(-109)
         }
         tryAgainButton.snp.makeConstraints { make in
@@ -140,5 +142,14 @@ final class ResultViewController: UIViewController {
         let controller = TabBarController()
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    private func calculateScore() {
+        let totalQuestions = 10
+        finalScoreLabel.text = "\(userCorrectAnswers)"
+        
+        let scorePercentage = (Double(userCorrectAnswers) / Double(totalQuestions)) * 100.0
+        
+        amountLabel.text = "\(userCorrectAnswers)% out of \(totalQuestions) Questions"
     }
 }

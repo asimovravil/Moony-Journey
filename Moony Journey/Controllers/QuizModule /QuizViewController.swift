@@ -12,6 +12,7 @@ final class QuizViewController: UIViewController {
 
     var quizBrain = QuizBrain()
     private var answerSelected = false
+    var userCorrectAnswers = 0
     
     // MARK: - UI
     
@@ -227,6 +228,7 @@ final class QuizViewController: UIViewController {
 
             if userGotItRight {
                 sender.backgroundColor = AppColor.green.uiColor
+                userCorrectAnswers += 10
             } else {
                 sender.backgroundColor = AppColor.red.uiColor
             }
@@ -239,6 +241,7 @@ final class QuizViewController: UIViewController {
     
     private func showResultViewController() {
         let resultViewController = ResultViewController()
+        resultViewController.userCorrectAnswers = userCorrectAnswers
         self.navigationController?.pushViewController(resultViewController, animated: true)
     }
     
