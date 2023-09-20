@@ -61,7 +61,7 @@ final class QuizViewController: UIViewController {
         button.setTitle("Jupiter", for: .normal)
         button.setTitleColor(AppColor.white.uiColor, for: .normal)
         button.titleLabel?.font = UIFont(name: "Heebo-Bold", size: 24)
-        button.contentHorizontalAlignment = .right
+        button.contentHorizontalAlignment = .left
         button.addTarget(self, action: #selector(answerButtonTapped(_:)), for: .touchUpInside)
         return button
     }()
@@ -72,7 +72,7 @@ final class QuizViewController: UIViewController {
         button.setTitle("Saturn", for: .normal)
         button.setTitleColor(AppColor.white.uiColor, for: .normal)
         button.titleLabel?.font = UIFont(name: "Heebo-Bold", size: 24)
-        button.contentHorizontalAlignment = .right
+        button.contentHorizontalAlignment = .left
         button.addTarget(self, action: #selector(answerButtonTapped(_:)), for: .touchUpInside)
         return button
     }()
@@ -83,7 +83,7 @@ final class QuizViewController: UIViewController {
         button.setTitle("Earth", for: .normal)
         button.setTitleColor(AppColor.white.uiColor, for: .normal)
         button.titleLabel?.font = UIFont(name: "Heebo-Bold", size: 24)
-        button.contentHorizontalAlignment = .right
+        button.contentHorizontalAlignment = .left
         button.addTarget(self, action: #selector(answerButtonTapped(_:)), for: .touchUpInside)
         return button
     }()
@@ -94,7 +94,7 @@ final class QuizViewController: UIViewController {
         button.setTitle("Neptune", for: .normal)
         button.setTitleColor(AppColor.white.uiColor, for: .normal)
         button.titleLabel?.font = UIFont(name: "Heebo-Bold", size: 24)
-        button.contentHorizontalAlignment = .right
+        button.contentHorizontalAlignment = .left
         button.addTarget(self, action: #selector(answerButtonTapped(_:)), for: .touchUpInside)
         return button
     }()
@@ -138,20 +138,28 @@ final class QuizViewController: UIViewController {
             make.trailing.equalToSuperview().offset(-24)
         }
         firstAnswerButton.snp.makeConstraints { make in
-            make.top.equalTo(questionImage.snp.bottom).offset(28)
+            make.top.equalTo(questionImage.snp.bottom).offset(16)
             make.leading.equalToSuperview().offset(36)
+            make.height.equalTo(60)
+            make.width.equalTo(342)
         }
         secondAnswerButton.snp.makeConstraints { make in
-            make.top.equalTo(firstAnswerButton.snp.bottom).offset(20)
+            make.top.equalTo(firstAnswerButton.snp.bottom).offset(8)
             make.leading.equalToSuperview().offset(36)
+            make.height.equalTo(60)
+            make.width.equalTo(342)
         }
         thirdAnswerButton.snp.makeConstraints { make in
-            make.top.equalTo(secondAnswerButton.snp.bottom).offset(20)
+            make.top.equalTo(secondAnswerButton.snp.bottom).offset(8)
             make.leading.equalToSuperview().offset(36)
+            make.height.equalTo(60)
+            make.width.equalTo(342)
         }
         fourthAnswerButton.snp.makeConstraints { make in
-            make.top.equalTo(thirdAnswerButton.snp.bottom).offset(20)
+            make.top.equalTo(thirdAnswerButton.snp.bottom).offset(8)
             make.leading.equalToSuperview().offset(36)
+            make.height.equalTo(60)
+            make.width.equalTo(342)
         }
         quitQuizButton.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(24)
