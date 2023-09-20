@@ -13,6 +13,9 @@
 		F16F15992ABA94C500F24263 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F16F15982ABA94C500F24263 /* Assets.xcassets */; };
 		F16F159C2ABA94C500F24263 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F16F159A2ABA94C500F24263 /* LaunchScreen.storyboard */; };
 		F16F15AA2ABA964600F24263 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F16F15A92ABA964600F24263 /* SnapKit */; };
+		F16F15AC2ABA973B00F24263 /* AppImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F15AB2ABA973B00F24263 /* AppImage.swift */; };
+		F16F15AE2ABA988B00F24263 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F16F15AD2ABA988B00F24263 /* Colors.xcassets */; };
+		F16F15B02ABA98CA00F24263 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F15AF2ABA98CA00F24263 /* AppColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		F16F15982ABA94C500F24263 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F16F159B2ABA94C500F24263 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F16F159D2ABA94C500F24263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F16F15AB2ABA973B00F24263 /* AppImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImage.swift; sourceTree = "<group>"; };
+		F16F15AD2ABA988B00F24263 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		F16F15AF2ABA98CA00F24263 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,9 @@
 			isa = PBXGroup;
 			children = (
 				F16F15982ABA94C500F24263 /* Assets.xcassets */,
+				F16F15AD2ABA988B00F24263 /* Colors.xcassets */,
+				F16F15AB2ABA973B00F24263 /* AppImage.swift */,
+				F16F15AF2ABA98CA00F24263 /* AppColor.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -170,6 +179,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F16F15AE2ABA988B00F24263 /* Colors.xcassets in Resources */,
 				F16F159C2ABA94C500F24263 /* LaunchScreen.storyboard in Resources */,
 				F16F15992ABA94C500F24263 /* Assets.xcassets in Resources */,
 			);
@@ -183,6 +193,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F16F15942ABA94C300F24263 /* MainViewController.swift in Sources */,
+				F16F15B02ABA98CA00F24263 /* AppColor.swift in Sources */,
+				F16F15AC2ABA973B00F24263 /* AppImage.swift in Sources */,
 				F16F15902ABA94C300F24263 /* AppDelegate.swift in Sources */,
 				F16F15922ABA94C300F24263 /* SceneDelegate.swift in Sources */,
 			);
