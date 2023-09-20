@@ -30,6 +30,32 @@ final class ResultViewController: UIViewController {
         return label
     }()
     
+    private lazy var finalScoreImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = AppImage.finalScore.uiImage
+        imageView.layer.masksToBounds = true
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }()
+    
+    private lazy var finalScoreLabel: UILabel = {
+        let label = UILabel()
+        label.text = "60"
+        label.textColor = AppColor.white.uiColor
+        label.font = UIFont(name: "Heebo-Black", size: 80)
+        label.numberOfLines = 0
+        return label
+    }()
+    
+    private lazy var percentLabel: UILabel = {
+        let label = UILabel()
+        label.text = "%"
+        label.textColor = AppColor.white.uiColor
+        label.font = UIFont(name: "Heebo-Black", size: 34)
+        label.numberOfLines = 0
+        return label
+    }()
+    
     private lazy var tryAgainButton: UIButton = {
         let button = UIButton()
         button.setImage(AppImage.tryAgain.uiImage, for: .normal)
@@ -50,7 +76,7 @@ final class ResultViewController: UIViewController {
     // MARK: - setupViews
     
     private func setupViews() {
-        [totalCorrectLabel, amountLabel, tryAgainButton].forEach() {
+        [totalCorrectLabel, amountLabel, finalScoreImage, tryAgainButton, finalScoreLabel, percentLabel].forEach() {
             view.addSubview($0)
         }
         view.backgroundColor = AppColor.backgroundColor.uiColor
@@ -66,6 +92,20 @@ final class ResultViewController: UIViewController {
         amountLabel.snp.makeConstraints { make in
             make.top.equalTo(totalCorrectLabel.snp.bottom).offset(8)
             make.leading.equalToSuperview().offset(24)
+        }
+        finalScoreImage.snp.makeConstraints { make in
+            make.top.equalTo(amountLabel.snp.bottom).offset(43)
+            make.leading.equalToSuperview().offset(24)
+            make.trailing.equalToSuperview().offset(-24)
+        }
+        finalScoreLabel.snp.makeConstraints { make in
+            make.leading.equalToSuperview().offset(138.5)
+            make.trailing.equalToSuperview().offset(-157.5)
+            make.bottom.equalTo(finalScoreImage.snp.bottom).offset(-89)
+        }
+        percentLabel.snp.makeConstraints { make in
+            make.leading.equalTo(finalScoreLabel.snp.trailing)
+            make.bottom.equalTo(finalScoreImage.snp.bottom).offset(-109)
         }
         tryAgainButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()

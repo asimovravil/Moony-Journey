@@ -71,6 +71,7 @@ enum AppImage: String, AppImageProtocol {
     // MARK: - Results
     
     case tryAgain
+    case finalScore
     
     // MARK: - Settings
     
