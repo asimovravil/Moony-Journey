@@ -51,6 +51,12 @@ enum AppImage: String, AppImageProtocol {
     case settingsTabActive
     case settingsTabInactive
     
+    // MARK: - Quiz
+    
+    case question
+    case quitQuiz
+    case nextQuiz
+    
     // MARK: - Background
     
     case background
