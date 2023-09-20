@@ -123,6 +123,17 @@ final class HintViewController: UIViewController {
     }
     
     @objc private func startHintButtonTapped() {
-        
+        UIView.animate(withDuration: 0.3) {
+            self.titleView.alpha = 0
+            self.titleLabel.alpha = 0
+            self.startHintButton.alpha = 0
+        } completion: { (_) in
+            self.titleView.isHidden = true
+            self.titleLabel.isHidden = true
+            self.startHintButton.isHidden = true
+            self.titleView.alpha = 1
+            self.titleLabel.alpha = 1
+            self.startHintButton.alpha = 1
+        }
     }
 }
