@@ -34,11 +34,13 @@ enum AppImage: String, AppImageProtocol {
     
     // MARK: - Main
     
+    case backNavigationButton
     case groupRocket
     case startQuizButton
     
     // MARK: - Level
     
+    case levelOpen
     case levelClosed
     
     // MARK: - Background

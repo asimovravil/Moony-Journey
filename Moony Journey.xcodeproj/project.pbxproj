@@ -19,6 +19,15 @@
 		F16F15BD2ABA9DF300F24263 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F15BC2ABA9DF300F24263 /* LevelViewController.swift */; };
 		F16F15BF2ABA9EAE00F24263 /* SectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F15BE2ABA9EAE00F24263 /* SectionType.swift */; };
 		F16F15C12ABA9F4B00F24263 /* LevelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F15C02ABA9F4B00F24263 /* LevelCollectionViewCell.swift */; };
+		F16F15CC2ABAA4BA00F24263 /* Heebo-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F16F15C32ABAA4BA00F24263 /* Heebo-ExtraBold.ttf */; };
+		F16F15CD2ABAA4BA00F24263 /* Heebo-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F16F15C42ABAA4BA00F24263 /* Heebo-Thin.ttf */; };
+		F16F15CE2ABAA4BA00F24263 /* Heebo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F16F15C52ABAA4BA00F24263 /* Heebo-Light.ttf */; };
+		F16F15CF2ABAA4BA00F24263 /* Heebo-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F16F15C62ABAA4BA00F24263 /* Heebo-ExtraLight.ttf */; };
+		F16F15D02ABAA4BA00F24263 /* Heebo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F16F15C72ABAA4BA00F24263 /* Heebo-Black.ttf */; };
+		F16F15D12ABAA4BA00F24263 /* Heebo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F16F15C82ABAA4BA00F24263 /* Heebo-SemiBold.ttf */; };
+		F16F15D22ABAA4BA00F24263 /* Heebo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F16F15C92ABAA4BA00F24263 /* Heebo-Regular.ttf */; };
+		F16F15D32ABAA4BA00F24263 /* Heebo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F16F15CA2ABAA4BA00F24263 /* Heebo-Medium.ttf */; };
+		F16F15D42ABAA4BA00F24263 /* Heebo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F16F15CB2ABAA4BA00F24263 /* Heebo-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +44,15 @@
 		F16F15BC2ABA9DF300F24263 /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
 		F16F15BE2ABA9EAE00F24263 /* SectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionType.swift; sourceTree = "<group>"; };
 		F16F15C02ABA9F4B00F24263 /* LevelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCollectionViewCell.swift; sourceTree = "<group>"; };
+		F16F15C32ABAA4BA00F24263 /* Heebo-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-ExtraBold.ttf"; sourceTree = "<group>"; };
+		F16F15C42ABAA4BA00F24263 /* Heebo-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Thin.ttf"; sourceTree = "<group>"; };
+		F16F15C52ABAA4BA00F24263 /* Heebo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Light.ttf"; sourceTree = "<group>"; };
+		F16F15C62ABAA4BA00F24263 /* Heebo-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-ExtraLight.ttf"; sourceTree = "<group>"; };
+		F16F15C72ABAA4BA00F24263 /* Heebo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Black.ttf"; sourceTree = "<group>"; };
+		F16F15C82ABAA4BA00F24263 /* Heebo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-SemiBold.ttf"; sourceTree = "<group>"; };
+		F16F15C92ABAA4BA00F24263 /* Heebo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Regular.ttf"; sourceTree = "<group>"; };
+		F16F15CA2ABAA4BA00F24263 /* Heebo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Medium.ttf"; sourceTree = "<group>"; };
+		F16F15CB2ABAA4BA00F24263 /* Heebo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +116,7 @@
 		F16F15A52ABA94F700F24263 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F16F15C22ABAA4A700F24263 /* Fonts */,
 				F16F15B52ABA9CF100F24263 /* AssetHelp */,
 				F16F15B62ABA9CF900F24263 /* AppHelp */,
 			);
@@ -180,6 +199,22 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		F16F15C22ABAA4A700F24263 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F16F15C72ABAA4BA00F24263 /* Heebo-Black.ttf */,
+				F16F15CB2ABAA4BA00F24263 /* Heebo-Bold.ttf */,
+				F16F15C32ABAA4BA00F24263 /* Heebo-ExtraBold.ttf */,
+				F16F15C62ABAA4BA00F24263 /* Heebo-ExtraLight.ttf */,
+				F16F15C52ABAA4BA00F24263 /* Heebo-Light.ttf */,
+				F16F15CA2ABAA4BA00F24263 /* Heebo-Medium.ttf */,
+				F16F15C92ABAA4BA00F24263 /* Heebo-Regular.ttf */,
+				F16F15C82ABAA4BA00F24263 /* Heebo-SemiBold.ttf */,
+				F16F15C42ABAA4BA00F24263 /* Heebo-Thin.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -244,9 +279,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F16F15D02ABAA4BA00F24263 /* Heebo-Black.ttf in Resources */,
+				F16F15CC2ABAA4BA00F24263 /* Heebo-ExtraBold.ttf in Resources */,
+				F16F15D32ABAA4BA00F24263 /* Heebo-Medium.ttf in Resources */,
+				F16F15D42ABAA4BA00F24263 /* Heebo-Bold.ttf in Resources */,
+				F16F15CE2ABAA4BA00F24263 /* Heebo-Light.ttf in Resources */,
 				F16F15AE2ABA988B00F24263 /* Colors.xcassets in Resources */,
+				F16F15D12ABAA4BA00F24263 /* Heebo-SemiBold.ttf in Resources */,
+				F16F15D22ABAA4BA00F24263 /* Heebo-Regular.ttf in Resources */,
+				F16F15CF2ABAA4BA00F24263 /* Heebo-ExtraLight.ttf in Resources */,
 				F16F159C2ABA94C500F24263 /* LaunchScreen.storyboard in Resources */,
 				F16F15992ABA94C500F24263 /* Assets.xcassets in Resources */,
+				F16F15CD2ABAA4BA00F24263 /* Heebo-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

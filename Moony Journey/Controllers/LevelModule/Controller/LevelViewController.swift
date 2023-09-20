@@ -19,6 +19,8 @@ final class LevelViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(LevelCollectionViewCell.self, forCellWithReuseIdentifier: LevelCollectionViewCell.reuseID)
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = .clear
         return collectionView
     }()
@@ -30,13 +32,13 @@ final class LevelViewController: UIViewController {
 
         setupViews()
         setupConstraints()
+        setupNavigationBar()
     }
 
     // MARK: - setupViews
     
     private func setupViews() {
         view.addSubview(mainCollectionView)
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         view.backgroundColor = AppColor.backgroundColor.uiColor
     }
     
@@ -46,6 +48,26 @@ final class LevelViewController: UIViewController {
         mainCollectionView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+    }
+    
+    // MARK: - setupNavigationBar
+    
+    private func setupNavigationBar() {
+        let backButton = UIBarButtonItem(image: AppImage.backNavigationButton.uiImage, style: .plain, target: self, action: #selector(backButtonTapped))
+        navigationItem.leftBarButtonItem = backButton
+        
+        let titleLabel = UILabel()
+        titleLabel.text = "Levels"
+        titleLabel.font = UIFont(name: "Heebo-Bold", size: 24)
+        titleLabel.textColor = AppColor.green.uiColor
+        titleLabel.sizeToFit()
+        
+        navigationItem.titleView = titleLabel
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+
+    @objc private func backButtonTapped() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     // MARK: - createLayout
@@ -70,7 +92,7 @@ final class LevelViewController: UIViewController {
                 heightDimension: .absolute(202)
             )
         )
-        item.contentInsets.trailing = 20
+        item.contentInsets.trailing = 24
         // Group
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
@@ -87,7 +109,7 @@ final class LevelViewController: UIViewController {
             top: 0,
             leading: 24,
             bottom: 10,
-            trailing: 4
+            trailing: 0
         )
         section.boundarySupplementaryItems = [supplementaryHeaderItem()]
         return section
@@ -121,6 +143,12 @@ extension LevelViewController: UICollectionViewDataSource, UICollectionViewDeleg
                 for: indexPath
             ) as? LevelCollectionViewCell else {
                 fatalError("Could not cast to LevelCollectionViewCell")
+            }
+            
+            if indexPath.item == 0 {
+                cell.levelButton.setImage(AppImage.levelOpen.uiImage, for: .normal)
+            } else {
+                cell.levelButton.setImage(AppImage.levelClosed.uiImage, for: .normal)
             }
         
             return cell

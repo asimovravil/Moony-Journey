@@ -12,7 +12,7 @@ final class LevelCollectionViewCell: UICollectionViewCell {
     
     // MARK: - UI
     
-    private lazy var levelClosedButton: UIButton = {
+    public lazy var levelButton: UIButton = {
         let button = UIButton()
         button.setImage(AppImage.levelClosed.uiImage, for: .normal)
         return button
@@ -36,7 +36,7 @@ final class LevelCollectionViewCell: UICollectionViewCell {
     // MARK: - setupViews
     
     private func setupViews() {
-        [levelClosedButton].forEach {
+        [levelButton].forEach {
             contentView.addSubview($0)
         }
     }
@@ -44,7 +44,7 @@ final class LevelCollectionViewCell: UICollectionViewCell {
     // MARK: - setupConstraints
     
     private func setupConstraints() {
-        levelClosedButton.snp.makeConstraints { make in
+        levelButton.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }

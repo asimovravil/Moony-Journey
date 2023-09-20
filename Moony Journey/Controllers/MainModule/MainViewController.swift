@@ -42,6 +42,7 @@ final class MainViewController: UIViewController {
         
         setupViews()
         setupConstraints()
+        setupNavigationBar()
     }
     
     // MARK: - setupViews
@@ -67,6 +68,12 @@ final class MainViewController: UIViewController {
             make.bottom.equalToSuperview().offset(-173)
             make.height.equalTo(83)
         }
+    }
+    
+    // MARK: - setupNavigationBar
+    
+    private func setupNavigationBar() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     // MARK: - Actions
