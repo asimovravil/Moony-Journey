@@ -38,7 +38,8 @@ final class HintViewController: UIViewController {
     
     private lazy var titleView: UIView = {
         let view = UIView()
-        view.backgroundColor = AppColor.backgroundColor.uiColor
+        let alpha: CGFloat = 0.6
+        view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: alpha)
         return view
     }()
     
