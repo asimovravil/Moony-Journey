@@ -64,6 +64,7 @@ final class QuizViewController: UIViewController {
         button.titleLabel?.font = UIFont(name: "Heebo-Bold", size: 24)
         button.contentHorizontalAlignment = .left
         button.addTarget(self, action: #selector(answerButtonTapped(_:)), for: .touchUpInside)
+        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
         return button
     }()
     
@@ -75,6 +76,7 @@ final class QuizViewController: UIViewController {
         button.titleLabel?.font = UIFont(name: "Heebo-Bold", size: 24)
         button.contentHorizontalAlignment = .left
         button.addTarget(self, action: #selector(answerButtonTapped(_:)), for: .touchUpInside)
+        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
         return button
     }()
     
@@ -86,6 +88,7 @@ final class QuizViewController: UIViewController {
         button.titleLabel?.font = UIFont(name: "Heebo-Bold", size: 24)
         button.contentHorizontalAlignment = .left
         button.addTarget(self, action: #selector(answerButtonTapped(_:)), for: .touchUpInside)
+        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
         return button
     }()
     
@@ -97,6 +100,7 @@ final class QuizViewController: UIViewController {
         button.titleLabel?.font = UIFont(name: "Heebo-Bold", size: 24)
         button.contentHorizontalAlignment = .left
         button.addTarget(self, action: #selector(answerButtonTapped(_:)), for: .touchUpInside)
+        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
         return button
     }()
     

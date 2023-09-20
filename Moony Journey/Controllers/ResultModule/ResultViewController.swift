@@ -148,7 +148,7 @@ final class ResultViewController: UIViewController {
         let totalQuestions = 10
         finalScoreLabel.text = "\(userCorrectAnswers)"
         
-        let scorePercentage = (Double(userCorrectAnswers) / Double(totalQuestions)) * 100.0
+        _ = (Double(userCorrectAnswers) / Double(totalQuestions)) * 100.0
         
         amountLabel.text = "\(userCorrectAnswers)% out of \(totalQuestions) Questions"
     }
