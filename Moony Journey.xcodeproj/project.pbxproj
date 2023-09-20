@@ -33,6 +33,7 @@
 		F16F15E22ABAEF5100F24263 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F15E12ABAEF5100F24263 /* SettingsViewController.swift */; };
 		F16F15E52ABAF5EC00F24263 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F15E42ABAF5EC00F24263 /* Question.swift */; };
 		F16F15E72ABAF60B00F24263 /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F15E62ABAF60B00F24263 /* QuizBrain.swift */; };
+		F16F15EA2ABAFD1600F24263 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F15E92ABAFD1600F24263 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		F16F15E12ABAEF5100F24263 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = SettingsModule/SettingsViewController.swift; sourceTree = "<group>"; };
 		F16F15E42ABAF5EC00F24263 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		F16F15E62ABAF60B00F24263 /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
+		F16F15E92ABAFD1600F24263 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				F16F15B82ABA9D6800F24263 /* LevelModule */,
 				F16F15D82ABAAF8600F24263 /* QuizModule  */,
 				F16F15E02ABAEF2F00F24263 /* SettingsModule */,
+				F16F15E82ABAFD0200F24263 /* ResultModule */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -262,6 +265,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		F16F15E82ABAFD0200F24263 /* ResultModule */ = {
+			isa = PBXGroup;
+			children = (
+				F16F15E92ABAFD1600F24263 /* ResultViewController.swift */,
+			);
+			path = ResultModule;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -357,6 +368,7 @@
 				F16F15BD2ABA9DF300F24263 /* LevelViewController.swift in Sources */,
 				F16F15902ABA94C300F24263 /* AppDelegate.swift in Sources */,
 				F16F15BF2ABA9EAE00F24263 /* SectionType.swift in Sources */,
+				F16F15EA2ABAFD1600F24263 /* ResultViewController.swift in Sources */,
 				F16F15E52ABAF5EC00F24263 /* Question.swift in Sources */,
 				F16F15922ABA94C300F24263 /* SceneDelegate.swift in Sources */,
 				F16F15E72ABAF60B00F24263 /* QuizBrain.swift in Sources */,

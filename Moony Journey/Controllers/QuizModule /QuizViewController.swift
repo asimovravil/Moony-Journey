@@ -203,21 +203,30 @@ final class QuizViewController: UIViewController {
     
     @objc private func answerButtonTapped(_ sender: UIButton) {
         let userAnswer = sender.currentTitle!
-        
+
         let userGotItRight = quizBrain.checkAnswer(userAnswer: userAnswer)
-        
+
         if userGotItRight {
             sender.backgroundColor = AppColor.green.uiColor
         } else {
             sender.backgroundColor = AppColor.red.uiColor
         }
-        
+
         sender.layer.cornerRadius = 10
         quizBrain.nextQuestion()
-        
-        Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+
+        if quizBrain.questionNumber == 0 {
+            showResultViewController()
+        } else {
+            Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        }
     }
 
+    
+    private func showResultViewController() {
+        let resultViewController = ResultViewController()
+        self.navigationController?.pushViewController(resultViewController, animated: true)
+    }
     
     @objc private func updateUI() {
         let questionText = quizBrain.getQuestionText()
