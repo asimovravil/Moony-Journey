@@ -30,6 +30,7 @@
 		F16F15D42ABAA4BA00F24263 /* Heebo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F16F15CB2ABAA4BA00F24263 /* Heebo-Bold.ttf */; };
 		F16F15D72ABAA8F600F24263 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F15D62ABAA8F600F24263 /* TabBarController.swift */; };
 		F16F15DA2ABAAFC000F24263 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F15D92ABAAFC000F24263 /* QuizViewController.swift */; };
+		F16F15E22ABAEF5100F24263 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F15E12ABAEF5100F24263 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		F16F15CB2ABAA4BA00F24263 /* Heebo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Bold.ttf"; sourceTree = "<group>"; };
 		F16F15D62ABAA8F600F24263 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F16F15D92ABAAFC000F24263 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		F16F15E12ABAEF5100F24263 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = SettingsModule/SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				F16F15B42ABA9CEA00F24263 /* MainModule */,
 				F16F15B82ABA9D6800F24263 /* LevelModule */,
 				F16F15D82ABAAF8600F24263 /* QuizModule  */,
+				F16F15E02ABAEF2F00F24263 /* SettingsModule */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -237,6 +240,14 @@
 			path = "QuizModule ";
 			sourceTree = "<group>";
 		};
+		F16F15E02ABAEF2F00F24263 /* SettingsModule */ = {
+			isa = PBXGroup;
+			children = (
+				F16F15E12ABAEF5100F24263 /* SettingsViewController.swift */,
+			);
+			name = SettingsModule;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -325,6 +336,7 @@
 			files = (
 				F16F15942ABA94C300F24263 /* MainViewController.swift in Sources */,
 				F16F15DA2ABAAFC000F24263 /* QuizViewController.swift in Sources */,
+				F16F15E22ABAEF5100F24263 /* SettingsViewController.swift in Sources */,
 				F16F15B02ABA98CA00F24263 /* AppColor.swift in Sources */,
 				F16F15AC2ABA973B00F24263 /* AppImage.swift in Sources */,
 				F16F15D72ABAA8F600F24263 /* TabBarController.swift in Sources */,

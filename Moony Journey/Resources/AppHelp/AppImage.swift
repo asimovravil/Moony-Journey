@@ -61,6 +61,12 @@ enum AppImage: String, AppImageProtocol {
     case thirdAnswer
     case fourthAnswer
     
+    // MARK: - Settings
+    
+    case shareApp
+    case privacyPolicy
+    case rateUs
+    
     // MARK: - Background
     
     case background

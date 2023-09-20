@@ -19,7 +19,7 @@ final class TabBarController: UITabBarController {
     
     private func setupTabBar() {
         let mainViewController = MainViewController()
-        let settingViewController = QuizViewController()
+        let settingViewController = SettingsViewController()
         
         let backgroundImage = UIImage(named: "background")
         self.tabBar.backgroundImage = backgroundImage
