@@ -56,6 +56,10 @@ enum AppImage: String, AppImageProtocol {
     case question
     case quitQuiz
     case nextQuiz
+    case firstAnswer
+    case secondAnswer
+    case thirdAnswer
+    case fourthAnswer
     
     // MARK: - Background
     
