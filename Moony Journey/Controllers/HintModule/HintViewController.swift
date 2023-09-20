@@ -10,6 +10,10 @@ import SnapKit
 
 final class HintViewController: UIViewController {
 
+    private var jetImageTopConstraint: Constraint?
+    private var jetImageTrailingConstraint: Constraint?
+    private var hintButtonTapped = false
+    
     // MARK: - UI
     
     private lazy var backgroundView: UIImageView = {
@@ -23,18 +27,21 @@ final class HintViewController: UIViewController {
     private lazy var earthButton: UIButton = {
         let button = UIButton()
         button.setImage(AppImage.earth.uiImage, for: .normal)
+        button.addTarget(self, action: #selector(earthButtonTapped), for: .touchUpInside)
         return button
     }()
     
     private lazy var saturnButton: UIButton = {
         let button = UIButton()
         button.setImage(AppImage.saturn.uiImage, for: .normal)
+        button.addTarget(self, action: #selector(saturnButtonTapped), for: .touchUpInside)
         return button
     }()
     
     private lazy var marsButton: UIButton = {
         let button = UIButton()
         button.setImage(AppImage.mars.uiImage, for: .normal)
+        button.addTarget(self, action: #selector(marsButtonTapped), for: .touchUpInside)
         return button
     }()
     
@@ -107,8 +114,8 @@ final class HintViewController: UIViewController {
             make.leading.equalToSuperview().offset(336)
         }
         jetImage.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(510)
-            make.trailing.equalToSuperview().offset(-269)
+            jetImageTopConstraint = make.top.equalToSuperview().offset(510).constraint
+            jetImageTrailingConstraint = make.trailing.equalToSuperview().offset(-269).constraint
         }
         titleView.snp.makeConstraints { make in
             make.leading.equalToSuperview()
@@ -152,6 +159,66 @@ final class HintViewController: UIViewController {
             self.titleView.alpha = 1
             self.titleLabel.alpha = 1
             self.startHintButton.alpha = 1
+            self.hintButtonTapped = true
         }
+    }
+    
+    @objc private func earthButtonTapped() {
+        if !hintButtonTapped {
+            return
+        }
+        
+        UIView.animate(withDuration: 0.3) {
+            self.jetImage.snp.updateConstraints { make in
+                make.top.equalToSuperview().offset(97)
+                make.trailing.equalToSuperview().offset(-144)
+            }
+            self.view.layoutIfNeeded()
+        } completion: { (_) in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                self.navigateToQuizViewController()
+            }
+        }
+    }
+    
+    @objc private func saturnButtonTapped() {
+        if !hintButtonTapped {
+            return
+        }
+        
+        UIView.animate(withDuration: 0.3) {
+            self.jetImage.snp.updateConstraints { make in
+                make.top.equalToSuperview().offset(358)
+                make.trailing.equalToSuperview().offset(-144)
+            }
+            self.view.layoutIfNeeded()
+        } completion: { (_) in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                self.navigateToQuizViewController()
+            }
+        }
+    }
+    
+    @objc private func marsButtonTapped() {
+        if !hintButtonTapped {
+            return
+        }
+        
+        UIView.animate(withDuration: 0.3) {
+            self.jetImage.snp.updateConstraints { make in
+                make.top.equalToSuperview().offset(589)
+                make.trailing.equalToSuperview().offset(-144)
+            }
+            self.view.layoutIfNeeded()
+        } completion: { (_) in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                self.navigateToQuizViewController()
+            }
+        }
+    }
+
+    private func navigateToQuizViewController() {
+        let quizViewController = QuizViewController()
+        self.navigationController?.pushViewController(quizViewController, animated: true)
     }
 }
