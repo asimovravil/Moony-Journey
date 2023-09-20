@@ -64,6 +64,9 @@ enum AppImage: String, AppImageProtocol {
     // MARK: - Hint
     
     case planets
+    case earth
+    case saturn
+    case mars
     case jet
     case closeHint
     case startHint

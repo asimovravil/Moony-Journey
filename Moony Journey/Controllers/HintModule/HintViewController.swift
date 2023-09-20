@@ -20,12 +20,22 @@ final class HintViewController: UIViewController {
         return imageView
     }()
     
-    private lazy var planetsImage: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = AppImage.planets.uiImage
-        imageView.layer.masksToBounds = true
-        imageView.contentMode = .scaleAspectFill
-        return imageView
+    private lazy var earthButton: UIButton = {
+        let button = UIButton()
+        button.setImage(AppImage.earth.uiImage, for: .normal)
+        return button
+    }()
+    
+    private lazy var saturnButton: UIButton = {
+        let button = UIButton()
+        button.setImage(AppImage.saturn.uiImage, for: .normal)
+        return button
+    }()
+    
+    private lazy var marsButton: UIButton = {
+        let button = UIButton()
+        button.setImage(AppImage.mars.uiImage, for: .normal)
+        return button
     }()
     
     private lazy var jetImage: UIImageView = {
@@ -73,7 +83,7 @@ final class HintViewController: UIViewController {
     // MARK: - setupViews
     
     private func setupViews() {
-        [backgroundView, planetsImage, jetImage, titleView, titleLabel, startHintButton].forEach() {
+        [backgroundView, earthButton, saturnButton, marsButton, jetImage, titleView, titleLabel, startHintButton].forEach() {
             view.addSubview($0)
         }
     }
@@ -84,9 +94,17 @@ final class HintViewController: UIViewController {
         backgroundView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-        planetsImage.snp.makeConstraints { make in
+        earthButton.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(78)
-            make.leading.equalToSuperview().offset(263)
+            make.leading.equalToSuperview().offset(334)
+        }
+        saturnButton.snp.makeConstraints { make in
+            make.top.equalTo(earthButton.snp.bottom).offset(105)
+            make.leading.equalToSuperview().offset(283)
+        }
+        marsButton.snp.makeConstraints { make in
+            make.top.equalTo(saturnButton.snp.bottom).offset(105)
+            make.leading.equalToSuperview().offset(336)
         }
         jetImage.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(510)
