@@ -66,7 +66,6 @@ final class MainViewController: UIViewController {
         startQuizButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.bottom.equalToSuperview().offset(-87)
-            make.height.equalTo(83)
         }
     }
     

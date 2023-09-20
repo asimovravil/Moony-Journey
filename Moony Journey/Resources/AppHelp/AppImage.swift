@@ -61,6 +61,13 @@ enum AppImage: String, AppImageProtocol {
     case thirdAnswer
     case fourthAnswer
     
+    // MARK: - Hint
+    
+    case planets
+    case jet
+    case closeHint
+    case startHint
+    
     // MARK: - Results
     
     case tryAgain

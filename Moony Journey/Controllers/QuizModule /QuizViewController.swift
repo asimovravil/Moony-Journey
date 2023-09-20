@@ -191,7 +191,8 @@ final class QuizViewController: UIViewController {
     }
 
     @objc private func questionButtonTapped() {
-        
+        let controller = HintViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     // MARK: - Actions
