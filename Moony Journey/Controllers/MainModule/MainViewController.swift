@@ -28,11 +28,10 @@ final class MainViewController: UIViewController {
         return imageView
     }()
     
-    private lazy var characterButton: UIButton = {
+    private lazy var startQuizButton: UIButton = {
         let button = UIButton()
         button.setImage(AppImage.startQuizButton.uiImage, for: .normal)
-        button.setTitleColor(AppColor.white.uiColor, for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+        button.addTarget(self, action: #selector(startQuizButtonTapped), for: .touchUpInside)
         return button
     }()
     
@@ -48,7 +47,7 @@ final class MainViewController: UIViewController {
     // MARK: - setupViews
     
     private func setupViews() {
-        [backgroundView, groupRocketImage, characterButton].forEach() {
+        [backgroundView, groupRocketImage, startQuizButton].forEach() {
             view.addSubview($0)
         }
     }
@@ -63,11 +62,18 @@ final class MainViewController: UIViewController {
             make.top.equalToSuperview()
             make.leading.equalToSuperview().offset(20)
         }
-        characterButton.snp.makeConstraints { make in
+        startQuizButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.bottom.equalToSuperview().offset(-173)
             make.height.equalTo(83)
         }
+    }
+    
+    // MARK: - Actions
+    
+    @objc private func startQuizButtonTapped() {
+        let controller = LevelViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }
 

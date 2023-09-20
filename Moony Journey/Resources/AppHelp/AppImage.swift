@@ -37,6 +37,10 @@ enum AppImage: String, AppImageProtocol {
     case groupRocket
     case startQuizButton
     
+    // MARK: - Level
+    
+    case levelClosed
+    
     // MARK: - Background
     
     case background
