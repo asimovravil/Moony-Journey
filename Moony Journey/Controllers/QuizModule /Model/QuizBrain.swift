@@ -22,7 +22,7 @@ struct QuizBrain {
         Question(q: "What's the center of our solar system?", a: ["Mars", "Moon", "Sun", "Venus"], correctAnswer: "Sun"),
         Question(q: "What is the study of stars and planets called?", a: ["Chemistry", "Biology", "Astronomy", "Geology"], correctAnswer: "Astronomy"),
         Question(q: "What spacecraft landed on the Moon in 1969?", a: ["Yuri-1", "Apollo-11", "Sputnik-1", "Voskhod-2"], correctAnswer: "Apollo-11"),
-        Question(q: "What causes the Northern Lights in the sky?", a: ["Rain", "Snow", "Thunderstorms", "Solar activity"], correctAnswer: "Solar activity")
+        Question(q: "What causes the Northern Lights in the sky?", a: ["Rain", "Snow", "Thunderstorms", "Solar activity"], correctAnswer: "")
     ]
 
 
