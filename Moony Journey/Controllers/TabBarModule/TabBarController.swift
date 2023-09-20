@@ -19,7 +19,7 @@ final class TabBarController: UITabBarController {
     
     private func setupTabBar() {
         let mainViewController = MainViewController()
-        let settingsViewController = LevelViewController()
+        let settingViewController = QuizViewController()
         
         let backgroundImage = UIImage(named: "background")
         self.tabBar.backgroundImage = backgroundImage
@@ -28,12 +28,12 @@ final class TabBarController: UITabBarController {
             title: "", image: AppImage.homeTabInactive.uiImage,
             selectedImage: AppImage.homeTabActive.uiImage
         )
-        
-        settingsViewController.tabBarItem = UITabBarItem(
+                
+        settingViewController.tabBarItem = UITabBarItem(
             title: "", image: AppImage.settingsTabInactive.uiImage,
             selectedImage: AppImage.settingsTabActive.uiImage
         )
-        viewControllers = [mainViewController, settingsViewController]
+        viewControllers = [mainViewController, settingViewController]
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     

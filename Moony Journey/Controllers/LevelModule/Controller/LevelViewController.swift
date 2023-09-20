@@ -11,6 +11,7 @@ import SnapKit
 final class LevelViewController: UIViewController {
 
     let sections: [SectionType] = [.main]
+    private var selectedLevel: Int?
     
     // MARK: - UI
     
@@ -143,6 +144,16 @@ extension LevelViewController: UICollectionViewDataSource, UICollectionViewDeleg
                 for: indexPath
             ) as? LevelCollectionViewCell else {
                 fatalError("Could not cast to LevelCollectionViewCell")
+            }
+            
+            if indexPath.item == 0 {
+                cell.levelButtonTappedHandler = { [weak self] in
+                    self?.selectedLevel = indexPath.item
+                    let quizViewController = QuizViewController()
+                    self?.navigationController?.pushViewController(quizViewController, animated: true)
+                }
+            } else {
+                cell.levelButtonTappedHandler = nil
             }
             
             if indexPath.item == 0 {

@@ -10,16 +10,18 @@ import SnapKit
 
 final class LevelCollectionViewCell: UICollectionViewCell {
     
+    var levelButtonTappedHandler: (() -> Void)?
+    static let reuseID = String(describing: LevelCollectionViewCell.self)
+    
     // MARK: - UI
     
     public lazy var levelButton: UIButton = {
         let button = UIButton()
         button.setImage(AppImage.levelClosed.uiImage, for: .normal)
+        button.addTarget(self, action: #selector(levelButtonTapped), for: .touchUpInside)
         return button
     }()
-    
-    static let reuseID = String(describing: LevelCollectionViewCell.self)
-    
+        
     // MARK: - Lifecycle
     
     override init(frame: CGRect) {
@@ -47,5 +49,11 @@ final class LevelCollectionViewCell: UICollectionViewCell {
         levelButton.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+    }
+    
+    // MARK: - Actions
+    
+    @objc private func levelButtonTapped() {
+        levelButtonTappedHandler?()
     }
 }
