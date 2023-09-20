@@ -21,8 +21,12 @@ final class TabBarController: UITabBarController {
         let mainViewController = MainViewController()
         let settingViewController = SettingsViewController()
         
-        let backgroundImage = UIImage(named: "background")
-        self.tabBar.backgroundImage = backgroundImage
+        self.tabBar.layer.cornerRadius = 30
+        self.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        self.tabBar.isTranslucent = true
+        
+        let alpha: CGFloat = 0.6
+        tabBar.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: alpha)
 
         mainViewController.tabBarItem = UITabBarItem(
             title: "", image: AppImage.homeTabInactive.uiImage,
