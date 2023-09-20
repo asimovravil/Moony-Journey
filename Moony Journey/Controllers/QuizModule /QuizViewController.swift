@@ -10,6 +10,8 @@ import SnapKit
 
 final class QuizViewController: UIViewController {
 
+    var quizBrain = QuizBrain()
+    
     // MARK: - UI
     
     private lazy var countLabel: UILabel = {
@@ -59,7 +61,7 @@ final class QuizViewController: UIViewController {
         button.setTitleColor(AppColor.white.uiColor, for: .normal)
         button.titleLabel?.font = UIFont(name: "Heebo-Bold", size: 24)
         button.contentHorizontalAlignment = .right
-        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -16)
+        button.addTarget(self, action: #selector(answerButtonTapped(_:)), for: .touchUpInside)
         return button
     }()
     
@@ -70,7 +72,7 @@ final class QuizViewController: UIViewController {
         button.setTitleColor(AppColor.white.uiColor, for: .normal)
         button.titleLabel?.font = UIFont(name: "Heebo-Bold", size: 24)
         button.contentHorizontalAlignment = .right
-        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -16)
+        button.addTarget(self, action: #selector(answerButtonTapped(_:)), for: .touchUpInside)
         return button
     }()
     
@@ -81,7 +83,7 @@ final class QuizViewController: UIViewController {
         button.setTitleColor(AppColor.white.uiColor, for: .normal)
         button.titleLabel?.font = UIFont(name: "Heebo-Bold", size: 24)
         button.contentHorizontalAlignment = .right
-        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -16)
+        button.addTarget(self, action: #selector(answerButtonTapped(_:)), for: .touchUpInside)
         return button
     }()
     
@@ -92,7 +94,7 @@ final class QuizViewController: UIViewController {
         button.setTitleColor(AppColor.white.uiColor, for: .normal)
         button.titleLabel?.font = UIFont(name: "Heebo-Bold", size: 24)
         button.contentHorizontalAlignment = .right
-        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -16)
+        button.addTarget(self, action: #selector(answerButtonTapped(_:)), for: .touchUpInside)
         return button
     }()
     
@@ -104,6 +106,7 @@ final class QuizViewController: UIViewController {
         setupViews()
         setupConstraints()
         setupNavigationBar()
+        updateUI()
     }
     
     // MARK: - setupViews
@@ -126,6 +129,7 @@ final class QuizViewController: UIViewController {
             make.top.equalTo(countLabel.snp.bottom).offset(8)
             make.leading.equalToSuperview().offset(24)
             make.trailing.equalToSuperview().offset(-24)
+            make.bottom.equalTo(questionImage.snp.top).offset(-16)
         }
         questionImage.snp.makeConstraints { make in
             make.top.equalTo(questionLabel.snp.bottom).offset(16)
@@ -195,5 +199,41 @@ final class QuizViewController: UIViewController {
     
     @objc private func nextQuizButtonTapped() {
 
+    }
+    
+    @objc private func answerButtonTapped(_ sender: UIButton) {
+        let userAnswer = sender.currentTitle!
+        
+        let userGotItRight = quizBrain.checkAnswer(userAnswer: userAnswer)
+        
+        if userGotItRight {
+            sender.backgroundColor = AppColor.green.uiColor
+        } else {
+            sender.backgroundColor = AppColor.red.uiColor
+        }
+        
+        sender.layer.cornerRadius = 10
+        quizBrain.nextQuestion()
+        
+        Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+    }
+
+    
+    @objc private func updateUI() {
+        let questionText = quizBrain.getQuestionText()
+        let answers = quizBrain.getAnswers()
+        
+        questionLabel.text = questionText
+        firstAnswerButton.setTitle(answers[0], for: .normal)
+        secondAnswerButton.setTitle(answers[1], for: .normal)
+        thirdAnswerButton.setTitle(answers[2], for: .normal)
+        fourthAnswerButton.setTitle(answers[3], for: .normal)
+        
+        countLabel.text = "\(quizBrain.questionNumber + 1)/\(quizBrain.quiz.count)"
+        
+        firstAnswerButton.backgroundColor = UIColor.clear
+        secondAnswerButton.backgroundColor = UIColor.clear
+        thirdAnswerButton.backgroundColor = UIColor.clear
+        fourthAnswerButton.backgroundColor = UIColor.clear
     }
 }

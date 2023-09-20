@@ -30,6 +30,7 @@ enum AppColor: String, AppColorProtocol {
     case backgroundColor
     case white
     case green
+    case red
     case gradientFirstMain
     case gradientSecMain
 }
