@@ -11,6 +11,7 @@ import SnapKit
 final class QuizViewController: UIViewController {
 
     var quizBrain = QuizBrain()
+    private var answerSelected = false
     
     // MARK: - UI
     
@@ -194,34 +195,36 @@ final class QuizViewController: UIViewController {
     // MARK: - Actions
     
     @objc private func quitQuizButtonTapped() {
-
+        self.navigationController?.popViewController(animated: true)
     }
     
     @objc private func nextQuizButtonTapped() {
-
-    }
-    
-    @objc private func answerButtonTapped(_ sender: UIButton) {
-        let userAnswer = sender.currentTitle!
-
-        let userGotItRight = quizBrain.checkAnswer(userAnswer: userAnswer)
-
-        if userGotItRight {
-            sender.backgroundColor = AppColor.green.uiColor
-        } else {
-            sender.backgroundColor = AppColor.red.uiColor
-        }
-
-        sender.layer.cornerRadius = 10
         quizBrain.nextQuestion()
-
+        
         if quizBrain.questionNumber == 0 {
             showResultViewController()
         } else {
-            Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+            updateUI()
         }
     }
+    
+    @objc private func answerButtonTapped(_ sender: UIButton) {
+        if !answerSelected {
+            let userAnswer = sender.currentTitle!
 
+            let userGotItRight = quizBrain.checkAnswer(userAnswer: userAnswer)
+
+            if userGotItRight {
+                sender.backgroundColor = AppColor.green.uiColor
+            } else {
+                sender.backgroundColor = AppColor.red.uiColor
+            }
+
+            sender.layer.cornerRadius = 10
+
+            answerSelected = true
+        }
+    }
     
     private func showResultViewController() {
         let resultViewController = ResultViewController()
@@ -244,5 +247,7 @@ final class QuizViewController: UIViewController {
         secondAnswerButton.backgroundColor = UIColor.clear
         thirdAnswerButton.backgroundColor = UIColor.clear
         fourthAnswerButton.backgroundColor = UIColor.clear
+        
+        answerSelected = false
     }
 }

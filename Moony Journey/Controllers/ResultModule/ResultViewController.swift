@@ -97,7 +97,7 @@ final class ResultViewController: UIViewController {
     // MARK: - Actions
     
     @objc private func tryAgainButtonTapped() {
-        let controller = MainViewController()
+        let controller = LevelViewController()
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }
