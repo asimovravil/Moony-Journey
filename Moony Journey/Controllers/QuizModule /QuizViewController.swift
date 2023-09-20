@@ -185,7 +185,9 @@ final class QuizViewController: UIViewController {
     }
 
     @objc private func backButtonTapped() {
-        self.navigationController?.popViewController(animated: true)
+        let controller = TabBarController()
+        controller.navigationItem.hidesBackButton = true
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 
     @objc private func questionButtonTapped() {

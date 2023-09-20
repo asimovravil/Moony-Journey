@@ -97,7 +97,8 @@ final class ResultViewController: UIViewController {
     // MARK: - Actions
     
     @objc private func tryAgainButtonTapped() {
-        let controller = LevelViewController()
+        let controller = TabBarController()
+        controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }
