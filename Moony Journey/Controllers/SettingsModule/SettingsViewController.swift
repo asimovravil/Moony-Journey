@@ -46,8 +46,14 @@ final class SettingsViewController: UIViewController {
     private lazy var privacyPolicyButton: UIButton = {
         let button = UIButton()
         button.setImage(AppImage.privacyPolicy.uiImage, for: .normal)
+        button.addTarget(self, action: #selector(openPrivacy), for: .touchUpInside)
         return button
     }()
+    
+    @objc private func openPrivacy() {
+        let vc = StructedManager.createPrivacyView()
+        self.present(vc, animated: true)
+    }
     
     // MARK: - Lifecycle
     
@@ -74,8 +80,7 @@ final class SettingsViewController: UIViewController {
         }
         settingsLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(66)
-            make.leading.equalToSuperview().offset(150)
-            make.trailing.equalToSuperview().offset(-149)
+            make.centerX.equalToSuperview()
         }
         shareAppButton.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(133)

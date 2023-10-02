@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import OneSignalFramework
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         UINavigationBar.appearance().tintColor = UIColor.white
+        
+        OneSignal.Debug.setLogLevel(.LL_VERBOSE)
+        OneSignal.initialize("fb96c409-7e60-42a2-a580-10afa0bcdb29", withLaunchOptions: launchOptions)
+        OneSignal.Notifications.requestPermission({ accepted in
+          print("User accepted notifications: \(accepted)")
+        }, fallbackToSettings: true)
         return true
     }
 

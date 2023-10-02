@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77A54B142AC710A900CFC8A2 /* RequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A54B132AC710A900CFC8A2 /* RequestResponse.swift */; };
+		77A54B162AC710F900CFC8A2 /* StructedSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A54B152AC710F900CFC8A2 /* StructedSettings.swift */; };
+		77A54B182AC7111C00CFC8A2 /* ReselectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A54B172AC7111C00CFC8A2 /* ReselectedViewController.swift */; };
+		77A54B1A2AC7113600CFC8A2 /* BottomBarViewSuperKek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A54B192AC7113600CFC8A2 /* BottomBarViewSuperKek.swift */; };
+		77A54B1C2AC7177400CFC8A2 /* SavedSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A54B1B2AC7177400CFC8A2 /* SavedSettingsManager.swift */; };
+		E2F5564F2AC8C3290085608E /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = E2F5564E2AC8C3290085608E /* OneSignalExtension */; };
+		E2F556512AC8C3290085608E /* OneSignalFramework in Frameworks */ = {isa = PBXBuildFile; productRef = E2F556502AC8C3290085608E /* OneSignalFramework */; };
+		E2F556532AC8C3290085608E /* OneSignalInAppMessages in Frameworks */ = {isa = PBXBuildFile; productRef = E2F556522AC8C3290085608E /* OneSignalInAppMessages */; };
+		E2F556552AC8C3290085608E /* OneSignalLocation in Frameworks */ = {isa = PBXBuildFile; productRef = E2F556542AC8C3290085608E /* OneSignalLocation */; };
+		E2F5565D2AC8C3970085608E /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F5565C2AC8C3970085608E /* NotificationService.swift */; };
+		E2F556612AC8C3970085608E /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E2F5565A2AC8C3970085608E /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F16F15902ABA94C300F24263 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F158F2ABA94C300F24263 /* AppDelegate.swift */; };
 		F16F15922ABA94C300F24263 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F15912ABA94C300F24263 /* SceneDelegate.swift */; };
 		F16F15942ABA94C300F24263 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F15932ABA94C300F24263 /* MainViewController.swift */; };
@@ -35,9 +46,43 @@
 		F16F15E72ABAF60B00F24263 /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F15E62ABAF60B00F24263 /* QuizBrain.swift */; };
 		F16F15EA2ABAFD1600F24263 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F15E92ABAFD1600F24263 /* ResultViewController.swift */; };
 		F16F15ED2ABB054800F24263 /* HintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F15EC2ABB054800F24263 /* HintViewController.swift */; };
+		F196F4BC2ABD9A4200859FA6 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F196F4BB2ABD9A4200859FA6 /* LoadingViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E2F5565F2AC8C3970085608E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F16F15842ABA94C300F24263 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2F556592AC8C3970085608E;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E2F556652AC8C3970085608E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E2F556612AC8C3970085608E /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		77A54B132AC710A900CFC8A2 /* RequestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResponse.swift; sourceTree = "<group>"; };
+		77A54B152AC710F900CFC8A2 /* StructedSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructedSettings.swift; sourceTree = "<group>"; };
+		77A54B172AC7111C00CFC8A2 /* ReselectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReselectedViewController.swift; sourceTree = "<group>"; };
+		77A54B192AC7113600CFC8A2 /* BottomBarViewSuperKek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarViewSuperKek.swift; sourceTree = "<group>"; };
+		77A54B1B2AC7177400CFC8A2 /* SavedSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSettingsManager.swift; sourceTree = "<group>"; };
+		E2F5565A2AC8C3970085608E /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2F5565C2AC8C3970085608E /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		E2F5565E2AC8C3970085608E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2F556662AC8C3E30085608E /* Moony Journey.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Moony Journey.entitlements"; sourceTree = "<group>"; };
 		F16F158C2ABA94C300F24263 /* Moony Journey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moony Journey.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16F158F2ABA94C300F24263 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F16F15912ABA94C300F24263 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,24 +112,46 @@
 		F16F15E62ABAF60B00F24263 /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
 		F16F15E92ABAFD1600F24263 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		F16F15EC2ABB054800F24263 /* HintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintViewController.swift; sourceTree = "<group>"; };
+		F196F4BB2ABD9A4200859FA6 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E2F556572AC8C3970085608E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F16F15892ABA94C300F24263 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F16F15AA2ABA964600F24263 /* SnapKit in Frameworks */,
+				E2F556552AC8C3290085608E /* OneSignalLocation in Frameworks */,
+				E2F556512AC8C3290085608E /* OneSignalFramework in Frameworks */,
+				E2F556532AC8C3290085608E /* OneSignalInAppMessages in Frameworks */,
+				E2F5564F2AC8C3290085608E /* OneSignalExtension in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E2F5565B2AC8C3970085608E /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				E2F5565C2AC8C3970085608E /* NotificationService.swift */,
+				E2F5565E2AC8C3970085608E /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
 		F16F15832ABA94C300F24263 = {
 			isa = PBXGroup;
 			children = (
 				F16F158E2ABA94C300F24263 /* Moony Journey */,
+				E2F5565B2AC8C3970085608E /* OneSignalNotificationServiceExtension */,
 				F16F158D2ABA94C300F24263 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				F16F158C2ABA94C300F24263 /* Moony Journey.app */,
+				E2F5565A2AC8C3970085608E /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +168,12 @@
 		F16F158E2ABA94C300F24263 /* Moony Journey */ = {
 			isa = PBXGroup;
 			children = (
+				E2F556662AC8C3E30085608E /* Moony Journey.entitlements */,
+				77A54B152AC710F900CFC8A2 /* StructedSettings.swift */,
+				77A54B192AC7113600CFC8A2 /* BottomBarViewSuperKek.swift */,
+				77A54B1B2AC7177400CFC8A2 /* SavedSettingsManager.swift */,
+				77A54B172AC7111C00CFC8A2 /* ReselectedViewController.swift */,
+				77A54B132AC710A900CFC8A2 /* RequestResponse.swift */,
 				F16F15A32ABA94E400F24263 /* Application */,
 				F16F15A42ABA94EA00F24263 /* Controllers */,
 				F16F15A52ABA94F700F24263 /* Resources */,
@@ -121,6 +195,7 @@
 		F16F15A42ABA94EA00F24263 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F196F4BA2ABD9A3000859FA6 /* LoadingModule */,
 				F16F15D52ABAA8D900F24263 /* TabBarModule */,
 				F16F15B42ABA9CEA00F24263 /* MainModule */,
 				F16F15B82ABA9D6800F24263 /* LevelModule */,
@@ -284,9 +359,34 @@
 			path = HintModule;
 			sourceTree = "<group>";
 		};
+		F196F4BA2ABD9A3000859FA6 /* LoadingModule */ = {
+			isa = PBXGroup;
+			children = (
+				F196F4BB2ABD9A4200859FA6 /* LoadingViewController.swift */,
+			);
+			path = LoadingModule;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E2F556592AC8C3970085608E /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2F556622AC8C3970085608E /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				E2F556562AC8C3970085608E /* Sources */,
+				E2F556572AC8C3970085608E /* Frameworks */,
+				E2F556582AC8C3970085608E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = E2F5565A2AC8C3970085608E /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		F16F158B2ABA94C300F24263 /* Moony Journey */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F16F15A02ABA94C500F24263 /* Build configuration list for PBXNativeTarget "Moony Journey" */;
@@ -294,14 +394,20 @@
 				F16F15882ABA94C300F24263 /* Sources */,
 				F16F15892ABA94C300F24263 /* Frameworks */,
 				F16F158A2ABA94C300F24263 /* Resources */,
+				E2F556652AC8C3970085608E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E2F556602AC8C3970085608E /* PBXTargetDependency */,
 			);
 			name = "Moony Journey";
 			packageProductDependencies = (
 				F16F15A92ABA964600F24263 /* SnapKit */,
+				E2F5564E2AC8C3290085608E /* OneSignalExtension */,
+				E2F556502AC8C3290085608E /* OneSignalFramework */,
+				E2F556522AC8C3290085608E /* OneSignalInAppMessages */,
+				E2F556542AC8C3290085608E /* OneSignalLocation */,
 			);
 			productName = "Moony Journey";
 			productReference = F16F158C2ABA94C300F24263 /* Moony Journey.app */;
@@ -314,9 +420,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					E2F556592AC8C3970085608E = {
+						CreatedOnToolsVersion = 15.0;
+					};
 					F16F158B2ABA94C300F24263 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -333,17 +442,26 @@
 			mainGroup = F16F15832ABA94C300F24263;
 			packageReferences = (
 				F16F15A82ABA964600F24263 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				E2F5564D2AC8C3290085608E /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */,
 			);
 			productRefGroup = F16F158D2ABA94C300F24263 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				F16F158B2ABA94C300F24263 /* Moony Journey */,
+				E2F556592AC8C3970085608E /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E2F556582AC8C3970085608E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F16F158A2ABA94C300F24263 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -366,6 +484,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E2F556562AC8C3970085608E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2F5565D2AC8C3970085608E /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F16F15882ABA94C300F24263 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -373,22 +499,36 @@
 				F16F15942ABA94C300F24263 /* MainViewController.swift in Sources */,
 				F16F15DA2ABAAFC000F24263 /* QuizViewController.swift in Sources */,
 				F16F15E22ABAEF5100F24263 /* SettingsViewController.swift in Sources */,
+				F196F4BC2ABD9A4200859FA6 /* LoadingViewController.swift in Sources */,
 				F16F15B02ABA98CA00F24263 /* AppColor.swift in Sources */,
 				F16F15AC2ABA973B00F24263 /* AppImage.swift in Sources */,
+				77A54B1A2AC7113600CFC8A2 /* BottomBarViewSuperKek.swift in Sources */,
+				77A54B182AC7111C00CFC8A2 /* ReselectedViewController.swift in Sources */,
 				F16F15D72ABAA8F600F24263 /* TabBarController.swift in Sources */,
 				F16F15BD2ABA9DF300F24263 /* LevelViewController.swift in Sources */,
 				F16F15ED2ABB054800F24263 /* HintViewController.swift in Sources */,
 				F16F15902ABA94C300F24263 /* AppDelegate.swift in Sources */,
+				77A54B142AC710A900CFC8A2 /* RequestResponse.swift in Sources */,
 				F16F15BF2ABA9EAE00F24263 /* SectionType.swift in Sources */,
 				F16F15EA2ABAFD1600F24263 /* ResultViewController.swift in Sources */,
 				F16F15E52ABAF5EC00F24263 /* Question.swift in Sources */,
 				F16F15922ABA94C300F24263 /* SceneDelegate.swift in Sources */,
 				F16F15E72ABAF60B00F24263 /* QuizBrain.swift in Sources */,
+				77A54B162AC710F900CFC8A2 /* StructedSettings.swift in Sources */,
+				77A54B1C2AC7177400CFC8A2 /* SavedSettingsManager.swift in Sources */,
 				F16F15C12ABA9F4B00F24263 /* LevelCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E2F556602AC8C3970085608E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2F556592AC8C3970085608E /* OneSignalNotificationServiceExtension */;
+			targetProxy = E2F5565F2AC8C3970085608E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F16F159A2ABA94C500F24263 /* LaunchScreen.storyboard */ = {
@@ -402,6 +542,73 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E2F556632AC8C3970085608E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 586DA9YRAZ;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Moony-Journey.OneSignalNotificationServiceExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		E2F556642AC8C3970085608E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 586DA9YRAZ;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Moony-Journey.OneSignalNotificationServiceExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		F16F159E2ABA94C500F24263 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -452,7 +659,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -506,7 +713,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -519,17 +726,20 @@
 		F16F15A12ABA94C500F24263 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Moony Journey/Moony Journey.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 66V736J4F3;
+				DEVELOPMENT_TEAM = 586DA9YRAZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Moony Journey/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -537,26 +747,32 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Moony-Journey";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		F16F15A22ABA94C500F24263 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Moony Journey/Moony Journey.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 66V736J4F3;
+				DEVELOPMENT_TEAM = 586DA9YRAZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Moony Journey/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -564,15 +780,27 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Moony-Journey";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E2F556622AC8C3970085608E /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2F556632AC8C3970085608E /* Debug */,
+				E2F556642AC8C3970085608E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F16F15872ABA94C300F24263 /* Build configuration list for PBXProject "Moony Journey" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -594,6 +822,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E2F5564D2AC8C3290085608E /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OneSignal/OneSignal-XCFramework";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.2;
+			};
+		};
 		F16F15A82ABA964600F24263 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -605,6 +841,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E2F5564E2AC8C3290085608E /* OneSignalExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2F5564D2AC8C3290085608E /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalExtension;
+		};
+		E2F556502AC8C3290085608E /* OneSignalFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2F5564D2AC8C3290085608E /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalFramework;
+		};
+		E2F556522AC8C3290085608E /* OneSignalInAppMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2F5564D2AC8C3290085608E /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalInAppMessages;
+		};
+		E2F556542AC8C3290085608E /* OneSignalLocation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2F5564D2AC8C3290085608E /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalLocation;
+		};
 		F16F15A92ABA964600F24263 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F16F15A82ABA964600F24263 /* XCRemoteSwiftPackageReference "SnapKit" */;
