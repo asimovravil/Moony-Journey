@@ -19,7 +19,7 @@ final class QuizViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = .clear
-        tableView.rowHeight = 850
+        tableView.rowHeight = 730
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
         return tableView
@@ -48,7 +48,8 @@ final class QuizViewController: UIViewController {
     
     private func setupConstraints() {
         tableView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.top.equalToSuperview().offset(100)
+            make.leading.trailing.bottom.equalToSuperview()
         }
     }
     

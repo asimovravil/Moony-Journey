@@ -48,6 +48,7 @@
 		F16F15ED2ABB054800F24263 /* HintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F15EC2ABB054800F24263 /* HintViewController.swift */; };
 		F196F4BC2ABD9A4200859FA6 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F196F4BB2ABD9A4200859FA6 /* LoadingViewController.swift */; };
 		F1C65D472ACAE6AB00E414BE /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C65D462ACAE6AB00E414BE /* QuizTableViewCell.swift */; };
+		F1C65D492ACAEA8500E414BE /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C65D482ACAEA8500E414BE /* ResultTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		F16F15EC2ABB054800F24263 /* HintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintViewController.swift; sourceTree = "<group>"; };
 		F196F4BB2ABD9A4200859FA6 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		F1C65D462ACAE6AB00E414BE /* QuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
+		F1C65D482ACAEA8500E414BE /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -350,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				F16F15E92ABAFD1600F24263 /* ResultViewController.swift */,
+				F1C65D482ACAEA8500E414BE /* ResultTableViewCell.swift */,
 			);
 			path = ResultModule;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F16F15942ABA94C300F24263 /* MainViewController.swift in Sources */,
+				F1C65D492ACAEA8500E414BE /* ResultTableViewCell.swift in Sources */,
 				F16F15DA2ABAAFC000F24263 /* QuizViewController.swift in Sources */,
 				F16F15E22ABAEF5100F24263 /* SettingsViewController.swift in Sources */,
 				F196F4BC2ABD9A4200859FA6 /* LoadingViewController.swift in Sources */,

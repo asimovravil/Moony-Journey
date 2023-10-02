@@ -132,7 +132,7 @@ final class QuizTableViewCell: UITableViewCell {
     
     private func setupConstraints() {
         countLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(70)
+            make.top.equalToSuperview()
             make.leading.equalToSuperview().offset(24)
         }
         questionLabel.snp.makeConstraints { make in
